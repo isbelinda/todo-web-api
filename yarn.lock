@@ -29,6 +29,12 @@
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-0.0.29.tgz#fbcfd330573b912ef59eeee14602bface630754b"
 
+"@types/mongodb":
+  version "2.1.36"
+  resolved "https://registry.yarnpkg.com/@types/mongodb/-/mongodb-2.1.36.tgz#20a2ff69131ba4dff96ffbd7b578c1d90b86616b"
+  dependencies:
+    "@types/node" "*"
+
 "@types/node@*":
   version "6.0.51"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.51.tgz#84cbf25111516ec9304d0b61469dc0fa9d12ba32"
@@ -182,6 +188,10 @@ braces@^1.8.2:
     expand-range "^1.8.1"
     preserve "^0.2.0"
     repeat-element "^1.1.2"
+
+bson@~0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/bson/-/bson-0.5.7.tgz#0d11fe0936c1fee029e11f7063f5d0ab2422ea3e"
 
 buffer-shims@^1.0.0:
   version "1.0.0"
@@ -363,6 +373,10 @@ end-of-stream@1.0.0:
 es6-promise@^3.0.2:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-3.3.1.tgz#a08cdde84ccdbf34d027a1451bc91d4bcd28a613"
+
+es6-promise@3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-3.2.1.tgz#ec56233868032909207170c39448e24449dd1fc4"
 
 escape-html@~1.0.3:
   version "1.0.3"
@@ -978,6 +992,21 @@ mkdirp@^0.5.0, "mkdirp@>=0.5 0", mkdirp@~0.5.1:
   dependencies:
     minimist "0.0.8"
 
+mongodb:
+  version "2.2.12"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-2.2.12.tgz#2a86f10228f911e9d6fefdbd7d922188d7b730f9"
+  dependencies:
+    es6-promise "3.2.1"
+    mongodb-core "2.0.14"
+    readable-stream "2.1.5"
+
+mongodb-core@2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-2.0.14.tgz#4e8743b87343d169a7622535edbd47dcacd790be"
+  dependencies:
+    bson "~0.5.7"
+    require_optional "~1.0.0"
+
 ms@0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
@@ -1238,7 +1267,7 @@ readable-stream@^2.0.0, "readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.
     string_decoder "~0.10.x"
     util-deprecate "~1.0.1"
 
-readable-stream@~2.1.4:
+readable-stream@~2.1.4, readable-stream@2.1.5:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.1.5.tgz#66fa8b720e1438b364681f2ad1a63c618448c9d0"
   dependencies:
@@ -1311,6 +1340,17 @@ request@^2.79.0:
     tunnel-agent "~0.4.1"
     uuid "^3.0.0"
 
+require_optional@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/require_optional/-/require_optional-1.0.0.tgz#52a86137a849728eb60a55533617f8f914f59abf"
+  dependencies:
+    resolve-from "^2.0.0"
+    semver "^5.1.0"
+
+resolve-from@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-2.0.0.tgz#9480ab20e94ffa1d9e80a804c7ea147611966b57"
+
 rimraf@~2.5.1, rimraf@~2.5.4, rimraf@2:
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
@@ -1323,7 +1363,7 @@ semver-diff@^2.0.0:
   dependencies:
     semver "^5.0.3"
 
-semver@^5.0.3, semver@~5.3.0:
+semver@^5.0.3, semver@^5.1.0, semver@~5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
 
